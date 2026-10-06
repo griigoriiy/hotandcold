@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hot &amp; Cold — Support</title>
+<style>
+  :root {
+    --bg: #eef3fb;
+    --card: #ffffff;
+    --text: #1f2a3a;
+    --muted: #5f6f85;
+    --accent: #1f6fe5;
+    --border: #d6e0f0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1a2b;
+      --card: #1e3050;
+      --text: #eaf0fa;
+      --muted: #9fb3cc;
+      --accent: #8fb8ff;
+      --border: #2b4066;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; }
+  .lang-switch {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 2rem;
+  }
+  .lang-switch button {
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--muted);
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 0.35rem 1.2rem;
+    cursor: pointer;
+  }
+  .lang-switch button:first-child { border-radius: 8px 0 0 8px; }
+  .lang-switch button:last-child { border-radius: 0 8px 8px 0; border-left: none; }
+  .lang-switch button.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  header { text-align: center; margin-bottom: 2rem; }
+  h1 { font-size: 1.8rem; margin-bottom: 0.3rem; }
+  header p { color: var(--muted); }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  h2 { font-size: 1.15rem; margin-bottom: 0.6rem; color: var(--accent); }
+  a { color: var(--accent); }
+  .email {
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 2rem;
+  }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="lang-switch">
+    <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+    <button id="btn-ru" onclick="setLang('ru')">RU</button>
+  </nav>
+
+  <div id="lang-en">
+    <header>
+      <h1>Hot &amp; Cold</h1>
+      <p>Support &amp; Contact</p>
+    </header>
+
+    <div class="card">
+      <h2>Contact Us</h2>
+      <p>If you have any questions, issues, or feedback about <strong>Hot &amp; Cold</strong> — a word-guessing game in which the app picks a secret word and shows how close in meaning each of your guesses is — feel free to reach out by email. We usually reply within a few days.</p>
+      <a class="email" href="mailto:griigoriiy@gmail.com">griigoriiy@gmail.com</a>
+    </div>
+
+    <div class="card">
+      <h2>Frequently Asked Questions</h2>
+      <p><strong>The game doesn't start or crashes.</strong><br>
+      Please make sure your device is running the latest version of its operating system and that you have the latest version of the game installed. If the problem persists, email us with your device model and OS version.</p>
+      <p style="margin-top:0.8rem"><strong>Why do I see ads?</strong><br>
+      Hot &amp; Cold is free to play and is supported by advertising served via Google AdMob. Ads keep the game free for everyone. See our Privacy Policy for details on how advertising works.</p>
+      <p style="margin-top:0.8rem"><strong>How do I report a bug or typo?</strong><br>
+      Send us an email with a short description and, if possible, a screenshot. It helps a lot!</p>
+    </div>
+  </div>
+
+  <div id="lang-ru" hidden>
+    <header>
+      <h1>Горячо-холодно</h1>
+      <p>Поддержка и обратная связь</p>
+    </header>
+
+    <div class="card">
+      <h2>Связаться с нами</h2>
+      <p>Если у вас есть вопросы, проблемы или пожелания по игре <strong>Горячо-холодно</strong> — игра на угадывание слова по смыслу: приложение загадывает слово и показывает, насколько каждое ваше слово близко к нему по смыслу, — напишите нам на почту. Обычно мы отвечаем в течение нескольких дней.</p>
+      <a class="email" href="mailto:griigoriiy@gmail.com">griigoriiy@gmail.com</a>
+    </div>
+
+    <div class="card">
+      <h2>Частые вопросы</h2>
+      <p><strong>Игра не запускается или вылетает.</strong><br>
+      Убедитесь, что на устройстве установлена свежая версия операционной системы и последняя версия игры. Если проблема осталась — напишите нам, указав модель устройства и версию ОС.</p>
+      <p style="margin-top:0.8rem"><strong>Почему я вижу рекламу?</strong><br>
+      «Горячо-холодно» — бесплатная игра, и её поддерживает реклама, показываемая через Google AdMob. Благодаря рекламе игра остаётся бесплатной для всех. Подробнее о том, как работает реклама, — в нашей Политике конфиденциальности.</p>
+      <p style="margin-top:0.8rem"><strong>Как сообщить об ошибке или опечатке?</strong><br>
+      Пришлите письмо с кратким описанием и, по возможности, скриншотом. Это очень помогает!</p>
+    </div>
+  </div>
+
+  <footer>
+    <p><a href="privacy.html" id="footer-link-privacy">Privacy Policy</a> &middot; <a href="terms.html" id="footer-link-terms">Terms and Conditions</a></p>
+    &copy; 2026 Hot &amp; Cold
+  </footer>
+
+</div>
+<script>
+  function setLang(lang) {
+    document.getElementById('lang-en').hidden = lang !== 'en';
+    document.getElementById('lang-ru').hidden = lang !== 'ru';
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
+    document.getElementById('footer-link-privacy').textContent = lang === 'ru' ? 'Политика конфиденциальности' : 'Privacy Policy';
+    document.getElementById('footer-link-terms').textContent = lang === 'ru' ? 'Условия использования' : 'Terms and Conditions';
+    document.documentElement.lang = lang;
+  }
+  setLang(new URLSearchParams(location.search).get('lang') === 'ru' ? 'ru' : 'en');
+</script>
+</body>
+</html>
